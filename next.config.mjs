@@ -1,21 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
+  basePath: '/birzontHomes',
+  assetPrefix: 'https://birzont.github.io/birzontHomes/',  // ← 바뀐 부분!
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  },
+};
 
-  // 여기가 추가된 부분
-  basePath: '/birzontHomes',
-  assetPrefix: '/birzontHomes/',
-  trailingSlash: true,
-}
-
-export default nextConfig
+export default nextConfig;
